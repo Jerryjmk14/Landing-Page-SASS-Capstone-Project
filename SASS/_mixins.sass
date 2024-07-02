@@ -1,11 +1,16 @@
-=border($shadow, $border)
-    -webkit-box-shadow: $shadow
-    -moz-box-shadow: $shadow
-    box-shadow: $shadow
+=btn-variant($color, $background, $border)
+    $active-background: darken($background, 10%)
+    $active-border: darken($border, 10%)
 
-    border: $border
+    color:                  $color
+    background-color:       $background
+    border-color:           $border
+    &:hover
+        color:              $color
+        background-color:   $active-background
+        border-color:       $active-border
 
-=border-rad($rad)
-    -webkit-border-radius: $rad
-    -moz-border-radius: $rad
-    border-radius: $rad
+=btn-sizing($btn-padding-x, $btn-padding-y, $font-base, $border-radius)
+    padding: $btn-padding-x $btn-padding-y
+    font-size: $font-base
+    border-radius: $border-radius
